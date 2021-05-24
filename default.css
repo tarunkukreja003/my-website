@@ -251,6 +251,27 @@ h6 {font-size: 16px;}
     right: -5px;
 }
 
+/* Following is the way to make your layouts responsive*/
+.about-wrapper{
+    display: grid;
+    /* Following line means fit as many columns as possible but as soon as the column width is less than 320px start stacking the columns */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 100px
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+
+}
 
 @media screen and (max-width: 1200px){
     .main-container{
