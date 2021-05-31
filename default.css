@@ -35,9 +35,7 @@ a{
     color:#17a2b8;
 }
 
-ul{
-    list-style: none;
-}
+
 
 h1 {font-size: 56px;}
 h2 {font-size: 36px;}
@@ -98,10 +96,10 @@ h6 {font-size: 16px;}
     -moz-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-        'navigation-wrapper navigation-wrapper'
-        'left-column right-column'
+        'navigation-wrapper navigation-wrapper navigation-wrapper'
+        'left-column right-column right-column'
     ;
 
 }
@@ -268,6 +266,8 @@ h6 {font-size: 16px;}
     bottom: -5px;
     right: -5px;
 }
+
+
 
 /* Following is the way to make your layouts responsive*/
 .about-wrapper{
