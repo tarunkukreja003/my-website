@@ -318,7 +318,18 @@ ul.highlights-list{
     ;
 }
 
-#havells-img{
+h5.experience-heading{
+    margin-bottom: 0;
+
+}
+
+h6.experience-heading{
+    margin-bottom: 0;
+    margin-top: 10px;
+    
+}
+
+.experience-img{
     display: block;
     width: 100%;
     height: auto;
