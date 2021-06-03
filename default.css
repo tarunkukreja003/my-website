@@ -96,10 +96,10 @@ h6 {font-size: 16px;}
     -moz-box-shadow: -3px 7px 26px 1px rgba(113,133,78,0.55);
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-        'navigation-wrapper navigation-wrapper navigation-wrapper'
-        'left-column right-column right-column'
+        'navigation-wrapper navigation-wrapper'
+        'left-column right-column'
     ;
 
 }
@@ -146,6 +146,7 @@ h6 {font-size: 16px;}
     margin-left: 5px;
     margin-right: 5px;
 }
+
 .navigation-wrapper{
     grid-area: navigation-wrapper;
     border-bottom: 1px solid var(--borderColor);
@@ -156,8 +157,11 @@ h6 {font-size: 16px;}
     border-radius: 10px 10px 0 0;
 }
 
+
+
 .left-column{
     grid-area: left-column;
+    display: grid;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -224,17 +228,22 @@ h6 {font-size: 16px;}
 #preview-shadow{
     background-color: var(--previewShadow);
     width: 300px;
-    height: 140px;
+    height: 200px;
     padding-left: 25px;
     padding-top: 25px;
 }
 
 #preview{
     width: 300px;
+    height: 200px;
     border: 1.5px solid #17a2b8;
     background-color: var(--previewBg);
     padding: 15px;
     position: relative;
+}
+
+ul.highlights-list{
+    font-size: 22px;
 }
 
 .corner-dots{
@@ -270,25 +279,64 @@ h6 {font-size: 16px;}
 
 
 /* Following is the way to make your layouts responsive*/
-.about-wrapper{
-    display: grid;
+.experience-wrapper{
+    /* display: grid; */
     /* Following line means fit as many columns as possible but as soon as the column width is less than 320px start stacking the columns */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
     padding-top: 50px;
     padding-bottom: 50px;
-    gap: 100px
+    /* gap: 100px */
 }
 
-#skills{
+/* #skills{
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewShadow);
-}
-.social-links{
+} */
+/* .social-links{
     display: grid;
     align-content: center;
     text-align: center;
 
+} */
+
+.experience{
+    display: grid;
+    /* Following line means fit as many columns as possible but as soon as the column width is less than 320px start stacking the columns */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding:10px;
+    gap: 50px;
+    border: 1px solid var(--borderColor);
+
+    box-shadow: -10px 7px 26px -9px rgba(25,36,6,0.48);
+    -webkit-box-shadow: -10px 7px 26px -9px rgba(25,36,6,0.48);
+    -moz-box-shadow: -10px 7px 26px -9px rgba(25,36,6,0.48);
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'experience-left-column experience-right-column'
+    ;
+}
+
+#havells-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.experience-left-column{
+    padding: 10px;
+    grid-area: experience-left-column;
+    display:grid;
+    align-content: center;
+
+}
+
+.experience-right-column{
+    padding: 10px;
+    grid-area: experience-right-column;
+    display: grid;
 }
 
 .post-wrapper{
@@ -354,4 +402,22 @@ h6 {font-size: 16px;}
     .right-column{
         justify-content: center;
     }
+}
+
+
+@media screen and (max-width: 800px){
+    .experience{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'experience-left-column'
+            'experience-right-column'
+        ;
+    
+    }
+
+    .experience-right-column{
+        justify-content: center;
+    }
+
+    
 }
