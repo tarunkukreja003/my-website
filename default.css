@@ -13,7 +13,6 @@
     --previewBg:rgba(2,12,27,0.7);
     --previewShadow:#233554;
     --green: #64ffda;
-    --green-tint: rgba(100,255,218,0.1);
     --font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
     /* keep a color for links */
 }
@@ -154,12 +153,18 @@ h6 {font-size: 16px;}
 }
 
 
+#navigation{
+	margin:0;
+	padding: 10px;
+}
 
 
 #navigation li{
     display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    list-style: none;
 }
 
 .navigation-wrapper{
@@ -358,6 +363,10 @@ h6.experience-heading{
 .post-intro{
     color: var(--secondaryText);
     font-size: 14px;
+}
+
+a.source-code-text{
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 1200px){
