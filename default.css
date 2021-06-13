@@ -332,11 +332,24 @@ h6.experience-heading{
 .thumbnail{
     display: block;
     width: 100%;
-    height: 180px;
+    height: 300px;
     object-fit: cover;
 
 }
 
+
+#flick-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+#weather-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 .post{
     border: 1px solid var(--borderColor);
 
@@ -364,8 +377,14 @@ h6.experience-heading{
     font-size: 14px;
 }
 
+.project-links-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
 a.source-code-text{
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .skills-wrapper{
